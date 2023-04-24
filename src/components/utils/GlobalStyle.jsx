@@ -2,40 +2,32 @@ import "modern-normalize";
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+html {
+    box-sizing: border-box;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 body {
-        background: #e6e8fc;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 16px;
-        padding: 32px;
-    }
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    color: #212121;
+    background-color: #e6e8fc;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
-    p{
-        margin: 0;
-    }
-
-    ul{
-        padding: 0;
-        margin: 0;
-        list-style: none;
-    }
-
-    h1, h2, h3, h4 {
-        text-align: center;
-        color:#333;
-        margin: 0;
-    }
-
-    h1 {
-        margin-bottom: 25px;
-    }
-    button {
-        background: #6974ca; 
-        color: white;
-        padding: 5px;
-        border-radius: ${p => p.theme.radii.sm };
-        border: 1px solid rgb(105 116 202);
-    }
-`
-    
-
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+`;
 
